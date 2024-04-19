@@ -8,6 +8,7 @@ for loan in loans:
     list_loans.append((delimiter + loan).split('\n'))
 
 cols = [
+    'Loan Interest Rate Type Description:', 'Loan Interest Rate:', 'Loan Actual Interest Rate:', 'Loan Statutory Interest Rate:'
     'Loan Type Code:', 'Loan Type Description:', 'Loan Award ID:', 'Loan Attending School Name:',
     'Loan Date:', 'Loan Repayment Begin Date:', 'Loan Period Begin Date:', 'Loan Period End Date:',
     'Loan Amount:', 'Loan Disbursed Amount:', 'Loan Canceled Amount:', 'Loan Canceled Date:',
