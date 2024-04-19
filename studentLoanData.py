@@ -1,28 +1,32 @@
 import pandas as pd
+input_file_path = 'lynnData.txt'
 
-delimiter = 'Loan Type Code:'
-loans = open('lynnData.txt', 'r').read().split(delimiter)
+# split the input on the loan type code delimitter
+loans = open(input_file_path, 'r').read().split('Loan Type Code:')
 
 data = []
-for loan in loans:
-    
-    loan_map = {}
-    
-    lines = loan.splitlines()
-    lines.pop(0)
 
-    for line in lines:
-    
+for loan in loans:
+    loan_map = {}
+
+    # split each loan details into individual strings
+    loan_details = loan.splitlines() 
+
+    # remove the lingering loan type code
+    loan_details.pop(0) 
+
+    for line in loan_details:
+
+        # Create a key value mapping of each loan's details
         key, value = line.split(':', 1)
         value = value.replace('$', '').replace(',', '').replace('%', '')
         loan_map[key] = value
 
+    # add each loan mapping to a list of loan mappings
     data.append(loan_map)
 
-
+# convert to data frame and export to excel file.
 df = pd.DataFrame(data)
-print(df)
-
 
 def create_excel_from_data(data, excel_file):
     df = pd.DataFrame(data)
