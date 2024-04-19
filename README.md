@@ -7,3 +7,8 @@ Making FSA student loan data readable.
 
 
 Why is there no option to export as .csv or .xlsx? The lack of options to export data as common file formats like CSV or Excel spreadsheets raises concerns about the transparency and accessibility of the data, suggesting a potential reluctance to enable independent analysis.
+
+Credit for original notebook:
+
+Ellie Evans
+@evansekeful · she/her
